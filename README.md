@@ -38,12 +38,13 @@ This repo is currently in **design + starter implementation** mode.
 - reusable prompt templates
 - working demo data for one blog post
 - starter JavaScript workflow modules
-- CLI command for generating output from a blog URL
+- CLI command for generating output from one or more blog URLs
 - optional LLM adapter for OpenAI-compatible chat generation
 - carousel image job automation
+- OpenAI image rendering for actual slide assets
+- batch output mode for multiple posts
 
 ### Next steps
-- wire in a dedicated image-rendering provider if you want actual files generated automatically
 - add more prompt tuning for your brand voice
 - add more tests and validation
 

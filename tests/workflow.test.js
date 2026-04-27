@@ -68,15 +68,19 @@ test('runWorkflow recommends carousel and emits slide image prompts', () => {
   assert.match(output.prompts.instagram, /Instagram caption/);
 });
 
- test('buildPromptBundle creates one prompt per carousel slide', () => {
+ test('buildPromptBundle creates one prompt per carousel slide and includes brand voice guidance', () => {
   const article = {
     title: 'Best Coffee for Cold Brew: What Makes a Great Cold Brew Bean',
     summary: 'The best cold brew starts with the right bean.',
     keyPoints: ['Medium to medium-dark roast works best', 'Extra coarse grind matters', 'Steep for 16 to 20 hours'],
+    url: 'https://hiswordcoffee.com/blogs/news/best-coffee-for-cold-brew',
   };
   const output = runWorkflow(article);
   const bundle = buildPromptBundle(article, output.contentBrief, output.carousel);
 
   assert.equal(bundle.carousel.length, output.carousel.length);
   assert.match(bundle.carousel[0], /Slide number: 1/);
+  assert.match(bundle.facebook, /warm, knowledgeable/);
+  assert.match(bundle.instagram, /line breaks/);
+  assert.match(bundle.facebook, /hiswordcoffee\.com/);
 });

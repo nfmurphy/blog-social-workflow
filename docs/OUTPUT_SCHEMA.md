@@ -1,9 +1,15 @@
 # Output Schema
 
-The workflow should return a single structured object so it can be reviewed, stored, or sent to downstream tools.
+The workflow can return either a single content package or a batch wrapper when multiple URLs are processed.
 
 ```json
 {
+  "article": {
+    "title": "",
+    "summary": "",
+    "keyPoints": [],
+    "url": ""
+  },
   "contentBrief": {
     "title": "",
     "summary": "",
@@ -49,6 +55,26 @@ The workflow should return a single structured object so it can be reviewed, sto
     "instagram": "",
     "carousel": ["", ""]
   }
+}
+```
+
+When the CLI processes multiple URLs, it writes:
+
+```json
+{
+  "batch": true,
+  "count": 2,
+  "items": [
+    {
+      "article": { "title": "" },
+      "contentBrief": {},
+      "facebookPost": {},
+      "instagramCaption": {},
+      "carousel": [],
+      "imageJobs": [],
+      "prompts": {}
+    }
+  ]
 }
 ```
 
