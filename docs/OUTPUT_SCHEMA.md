@@ -1,23 +1,23 @@
 # Output Schema
 
-The workflow should return a single structured object so it can be reviewed, stored, or sent to publishing tools.
+The workflow should return a single structured object so it can be reviewed, stored, or sent to downstream tools.
 
 ```json
 {
-  "content_brief": {
+  "contentBrief": {
     "title": "",
     "summary": "",
-    "key_takeaway": "",
+    "keyTakeaway": "",
     "audience": "",
-    "best_angle": "",
-    "recommended_formats": []
+    "bestAngle": "",
+    "recommendedFormats": []
   },
-  "facebook_post": {
+  "facebookPost": {
     "copy": "",
     "cta": "",
-    "link_strategy": ""
+    "linkStrategy": ""
   },
-  "instagram_caption": {
+  "instagramCaption": {
     "copy": "",
     "cta": "",
     "hashtags": []
@@ -25,13 +25,30 @@ The workflow should return a single structured object so it can be reviewed, sto
   "carousel": [
     {
       "slide": 1,
-      "on_slide_copy": "",
+      "onSlideCopy": "",
       "purpose": "",
-      "image_prompt": "",
-      "design_notes": "",
-      "alt_text": ""
+      "imagePrompt": "",
+      "designNotes": "",
+      "altText": ""
     }
-  ]
+  ],
+  "imageJobs": [
+    {
+      "slide": 1,
+      "filename": "slide-01.json",
+      "title": "",
+      "articleUrl": "",
+      "prompt": "",
+      "altText": "",
+      "designNotes": ""
+    }
+  ],
+  "prompts": {
+    "generation": "",
+    "facebook": "",
+    "instagram": "",
+    "carousel": ["", ""]
+  }
 }
 ```
 
@@ -39,10 +56,12 @@ The workflow should return a single structured object so it can be reviewed, sto
 
 If `carousel` is present, each slide must include:
 
-- `on_slide_copy`
+- `onSlideCopy`
 - `purpose`
-- `image_prompt`
-- `design_notes`
-- `alt_text`
+- `imagePrompt`
+- `designNotes`
+- `altText`
 
-That makes the carousel usable by both content and design workflows.
+If `imageJobs` is present, each job should include the slide number, filename, prompt text, and alt text so the carousel can be rendered or handed off to another image tool.
+
+That makes the workflow usable by both content and design pipelines.

@@ -6,8 +6,9 @@ This repo is designed around a simple pipeline:
 2. **Summarize into a content brief**
 3. **Choose the best social format**
 4. **Generate platform-specific copy**
-5. **If a carousel is recommended, generate slide assets**
+5. **If a carousel is recommended, generate slide assets and image jobs**
 6. **Package everything for human review**
+7. **Optionally write JSON artifacts from the CLI**
 
 ## Design goals
 

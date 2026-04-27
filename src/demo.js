@@ -1,5 +1,5 @@
 import { extractArticleFromHtml } from './extract-article.js';
-import { runWorkflow } from './workflow.js';
+import { generateSocialPackage } from './generator.js';
 
 const coldBrewHtml = `
 <html>
@@ -33,7 +33,7 @@ const article = extractArticleFromHtml(
   'https://hiswordcoffee.com/blogs/news/best-coffee-for-cold-brew',
 );
 
-const output = runWorkflow({
+const output = await generateSocialPackage({
   ...article,
   featuredProduct: 'Colombia El Tiple',
   audience: 'coffee drinkers who want smoother cold brew at home',

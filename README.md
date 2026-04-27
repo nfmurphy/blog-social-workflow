@@ -38,11 +38,13 @@ This repo is currently in **design + starter implementation** mode.
 - reusable prompt templates
 - working demo data for one blog post
 - starter JavaScript workflow modules
+- CLI command for generating output from a blog URL
+- optional LLM adapter for OpenAI-compatible chat generation
+- carousel image job automation
 
 ### Next steps
-- connect real article extraction to live URLs at scale
-- connect an LLM for copy generation
-- add publishing integrations
+- wire in a dedicated image-rendering provider if you want actual files generated automatically
+- add more prompt tuning for your brand voice
 - add more tests and validation
 
 ## Demo
@@ -56,6 +58,7 @@ Run:
 ```bash
 npm test
 npm run demo
+npm run generate -- --url https://hiswordcoffee.com/blogs/news/best-coffee-for-cold-brew --out output.json --render-images
 ```
 
 See:

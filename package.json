@@ -6,6 +6,7 @@
   "description": "A blog-to-Facebook/Instagram content workflow with carousel asset generation.",
   "scripts": {
     "demo": "node src/demo.js",
+    "generate": "node src/cli.js",
     "test": "node --test",
     "build": "echo 'No build step yet'",
     "format": "echo 'No formatter configured yet'"

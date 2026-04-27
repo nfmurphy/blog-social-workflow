@@ -1,3 +1,16 @@
+export function buildGenerationInstructions(article, contentBrief) {
+  return [
+    'You are generating a complete social content package for a coffee brand blog article.',
+    `Article title: ${article.title}`,
+    `Article summary: ${article.summary}`,
+    `Key takeaway: ${contentBrief.keyTakeaway}`,
+    `Best angle: ${contentBrief.bestAngle}`,
+    `Audience: ${contentBrief.audience}`,
+    'Return valid JSON with facebookPost, instagramCaption, carousel, and imageJobs when relevant.',
+    'The carousel must include one image prompt per slide.',
+  ].join('\n');
+}
+
 export function buildFacebookPrompt(article, contentBrief) {
   return [
     'You are writing a Facebook post for a coffee brand.',
@@ -39,6 +52,7 @@ export function buildCarouselSlidePrompt({ article, slide, contentBrief }) {
 
 export function buildPromptBundle(article, contentBrief, carousel) {
   return {
+    generation: buildGenerationInstructions(article, contentBrief),
     facebook: buildFacebookPrompt(article, contentBrief),
     instagram: buildInstagramPrompt(article, contentBrief),
     carousel: carousel.map((slide) => buildCarouselSlidePrompt({ article, slide, contentBrief })),
