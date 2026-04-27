@@ -25,6 +25,7 @@ Each blog post should produce a complete social package:
 - carousel slides, when useful
 - image prompt for every slide
 - alt text and design notes
+- prompt bundle for LLM generation
 
 ## Repository status
 
@@ -33,14 +34,16 @@ This repo is currently in **design + starter implementation** mode.
 ### Included
 - architecture docs
 - output schema
+- basic article extraction from HTML or URL
+- reusable prompt templates
 - working demo data for one blog post
 - starter JavaScript workflow modules
 
 ### Next steps
-- connect real article extraction
+- connect real article extraction to live URLs at scale
 - connect an LLM for copy generation
 - add publishing integrations
-- add tests and validation
+- add more tests and validation
 
 ## Demo
 
@@ -48,10 +51,17 @@ The repository includes a worked example for:
 
 `Best Coffee for Cold Brew: What Makes a Great Cold Brew Bean`
 
+Run:
+
+```bash
+npm test
+npm run demo
+```
+
 See:
 
 - `examples/cold-brew-workflow-output.json`
-- `src/demo.ts`
+- `src/demo.js`
 
 ## Recommended architecture
 

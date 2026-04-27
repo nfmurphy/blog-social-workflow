@@ -1,3 +1,18 @@
+import { buildPromptBundle } from './prompts.js';
+
+const DEFAULT_KEY_POINT_LIMIT = 6;
+
+export function normalizeArticle(input) {
+  return {
+    title: input.title,
+    summary: input.summary,
+    keyPoints: input.keyPoints ?? [],
+    featuredProduct: input.featuredProduct,
+    audience: input.audience,
+    url: input.url,
+  };
+}
+
 export function recommendFormats(article) {
   const pointCount = article.keyPoints.length;
   const hasHowToStructure = pointCount >= 3;
@@ -131,11 +146,25 @@ export function generateCarousel(article) {
 }
 
 export function runWorkflow(article) {
-  const contentBrief = buildContentBrief(article);
+  const normalizedArticle = normalizeArticle(article);
+  const contentBrief = buildContentBrief(normalizedArticle);
+  const carousel = generateCarousel(normalizedArticle);
   return {
     contentBrief,
-    facebookPost: generateFacebookPost(article),
-    instagramCaption: generateInstagramCaption(article),
-    carousel: generateCarousel(article),
+    facebookPost: generateFacebookPost(normalizedArticle),
+    instagramCaption: generateInstagramCaption(normalizedArticle),
+    carousel,
+    prompts: buildPromptBundle(normalizedArticle, contentBrief, carousel),
   };
+}
+
+export function demoArticleToWorkflow(article) {
+  return runWorkflow({
+    title: article.title,
+    summary: article.summary,
+    keyPoints: article.keyPoints.slice(0, DEFAULT_KEY_POINT_LIMIT),
+    featuredProduct: article.featuredProduct,
+    audience: article.audience,
+    url: article.url,
+  });
 }
