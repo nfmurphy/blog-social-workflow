@@ -1,0 +1,15 @@
+{
+  "name": "blog-social-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A blog-to-Facebook/Instagram content workflow with carousel asset generation.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "build": "echo 'No build step yet'",
+    "format": "echo 'No formatter configured yet'"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

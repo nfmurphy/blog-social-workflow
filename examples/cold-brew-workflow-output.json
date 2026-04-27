@@ -1,0 +1,89 @@
+{
+  "content_brief": {
+    "title": "Best Coffee for Cold Brew: What Makes a Great Cold Brew Bean",
+    "summary": "The best cold brew starts with the right bean. Medium to medium-dark roasts, extra coarse grind, and long steeping produce the smoothest, sweetest cup.",
+    "key_takeaway": "Better cold brew starts with the right bean, the right grind, and the right steep time.",
+    "audience": "coffee drinkers who want smoother cold brew at home",
+    "best_angle": "Not every coffee makes great cold brew.",
+    "recommended_formats": [
+      "facebook_post",
+      "instagram_caption",
+      "instagram_carousel"
+    ]
+  },
+  "facebook_post": {
+    "copy": "Not every coffee is the right coffee for cold brew. If you want a smooth, sweet, low-acid cup, the bean matters just as much as the brew method. In this guide, we break down the roast level, origin, grind size, and steep time that make the biggest difference. Our top pick is Colombia El Tiple. Read the full guide and brew better cold brew at home.",
+    "cta": "Read the full guide",
+    "link_strategy": "Include the article link directly in the post: https://hiswordcoffee.com/blogs/news/best-coffee-for-cold-brew"
+  },
+  "instagram_caption": {
+    "copy": "Not every coffee makes great cold brew.\n\nFor the smoothest, sweetest cup:\n• go medium to medium-dark\n• grind extra coarse\n• steep 16–20 hours\n\nTop pick: Colombia El Tiple.\n\nSave this for your next brew day.",
+    "cta": "Save this for later",
+    "hashtags": [
+      "#coldbrew",
+      "#specialtycoffee",
+      "#coffeetips",
+      "#freshroastedcoffee",
+      "#coffeelover",
+      "#brewbetter"
+    ]
+  },
+  "carousel": [
+    {
+      "slide": 1,
+      "on_slide_copy": "Not every coffee makes great cold brew",
+      "purpose": "Hook / stop-the-scroll opener",
+      "image_prompt": "Premium specialty coffee flat lay with a cold brew glass, roasted coffee beans, and a grinder on a warm neutral surface, editorial lifestyle photography, minimal composition, natural light, earthy tones, modern coffee brand aesthetic",
+      "design_notes": "Bold headline, high contrast, simple background, one focal beverage image",
+      "alt_text": "A cold brew glass beside roasted coffee beans and a coffee grinder on a warm neutral tabletop"
+    },
+    {
+      "slide": 2,
+      "on_slide_copy": "Best roast: medium to medium-dark",
+      "purpose": "Teach the ideal roast level",
+      "image_prompt": "Stylish coffee roast comparison composition with beans in medium and medium-dark tones, warm brown and caramel palette, clean infographic style, premium flat lay, soft natural light",
+      "design_notes": "Simple visual comparison, roast labels, clean hierarchy",
+      "alt_text": "A roast comparison showing medium and medium-dark coffee beans in warm earthy tones"
+    },
+    {
+      "slide": 3,
+      "on_slide_copy": "Best flavors: chocolate, caramel, nutty",
+      "purpose": "Highlight taste profile",
+      "image_prompt": "Coffee tasting notes concept image with cocoa powder, caramel pieces, roasted nuts, and coffee beans arranged aesthetically, premium product photography, warm tones, soft shadows, editorial style",
+      "design_notes": "Use three flavor callouts, keep it sensory and elegant",
+      "alt_text": "Coffee beans arranged with chocolate, caramel, and nutty tasting note visuals"
+    },
+    {
+      "slide": 4,
+      "on_slide_copy": "Best grind: extra coarse",
+      "purpose": "Teach grind size",
+      "image_prompt": "Close-up of coarse ground coffee in a grinder or bowl, macro product photography, crisp texture detail, warm neutral background, specialty coffee editorial style",
+      "design_notes": "Show texture clearly, avoid clutter",
+      "alt_text": "Extra coarse coffee grounds shown in a close-up textured arrangement"
+    },
+    {
+      "slide": 5,
+      "on_slide_copy": "Best steep time: 16–20 hours",
+      "purpose": "Teach brewing timing",
+      "image_prompt": "Minimal kitchen or café scene with a cold brew jar steeping coffee overnight, soft morning light, premium lifestyle photography, modern glass container, warm neutral tones",
+      "design_notes": "Use a clock or time cue if useful, keep the image calm and clean",
+      "alt_text": "A glass cold brew jar steeping coffee overnight on a clean kitchen counter"
+    },
+    {
+      "slide": 6,
+      "on_slide_copy": "Top pick: Colombia El Tiple",
+      "purpose": "Feature the product recommendation",
+      "image_prompt": "Bag of Colombia El Tiple styled next to a cold brew glass and scattered roasted beans, lifestyle product photography, warm earthy tones, natural light, polished ecommerce aesthetic",
+      "design_notes": "Make the product packaging legible and prominent",
+      "alt_text": "A bag of Colombia El Tiple coffee beside a cold brew glass and scattered beans"
+    },
+    {
+      "slide": 7,
+      "on_slide_copy": "Brew better cold brew at home",
+      "purpose": "CTA / closing slide",
+      "image_prompt": "Inviting cold brew serving scene with a glass of iced cold brew, subtle coffee styling, cozy morning light, premium editorial photography, minimal composition, earthy café aesthetic",
+      "design_notes": "Include CTA text and brand logo if needed",
+      "alt_text": "A finished glass of cold brew in a warm, inviting coffee setting"
+    }
+  ]
+}
